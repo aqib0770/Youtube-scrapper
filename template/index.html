@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type="text"], input[type="submit"] {
+        border-radius: 15px;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 40px;
+        font-family: Arial, sans-serif;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Enter YouTube Channel Name</h1>
+
+    <div class="form">
+        <form action="/review" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</div>
+{% endblock %}

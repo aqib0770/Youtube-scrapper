@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Youtube Data</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header">Scrapped Data</div>
+
+   <table cellspacing="0">
+      <tr>
+         <th>Title</th>
+         <th>Link</th>
+         <th>Thumbnail</th>
+         <th>Views</th>
+         <th>Time </th>
+      </tr>
+         {% for row in main_list %}
+      <tr>
+          <td>{{row.title}}</td>
+         <td><a href="{{ row.links }}">{{ row.links }}</a></td>
+         <td><img src="{{ row.thumbnails }}" alt="Thumbnail"></td>
+         <td>{{ row.views }}</td>
+         <td>{{ row.time }} </td>
+      </tr>
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>
