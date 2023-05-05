@@ -64,7 +64,7 @@ def scrap():
 
     with open(f'{searchString}.csv','w',encoding='utf-8', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(['Title', 'Link', 'Thumbnail', 'Views', 'Time'])
+        writer.writerow(['Titles', 'Links', 'Thumbnails', 'Views', 'Time'])
         for i, j, k, l, m in zip(titles, links, thumbnails, views, time):
             writer.writerow([i, j, k, l, m])
     
