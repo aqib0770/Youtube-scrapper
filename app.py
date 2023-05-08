@@ -1,5 +1,5 @@
-from flask import Flask,render_template,jsonify,request
-from flask_cors import CORS,cross_origin
+from flask import Flask,render_template,request
+from flask_cors import cross_origin
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
